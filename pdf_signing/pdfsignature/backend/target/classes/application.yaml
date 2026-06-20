@@ -1,0 +1,41 @@
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/signature_db
+    username: postgres
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: 87cfd0ce633a82
+    password: 6b78225debed0c
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: mySuperSecretJwtKeyForSignatureApp123456
+
+file:
+  upload-dir: D:\projects\pdfsignature\pdfsignature\uploads
+
+signature:
+  upload-dir: D:\projects\pdfsignature\pdfsignature\signatures
+
+signed:
+  output-dir: D:\projects\pdfsignature\pdfsignature\signed
+
+logging:
+  level:
+    org.springframework.security: DEBUG
